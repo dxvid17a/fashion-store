@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FASHION STORE — Compra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="encabezado">
+    <div class="contenedor-nav">
+      <a href="index.html" class="marca-logo">FASHION STORE</a>
+
+      <nav class="menu-navegacion" aria-label="Menú principal">
+        <a href="index.html" class="enlace-nav">INICIO</a>
+        <a href="productos.html" class="enlace-nav">PRODUCTOS</a>
+        <a href="nosotros.html" class="enlace-nav">NOSOTROS</a>
+        <a href="compra.html" class="enlace-nav activo">COMPRA</a>
+        <a href="compra.html" class="btn-carrito-nav">
+          Carrito (<span id="contadorCarrito">0</span>)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div class="cinta-amarilla">
+      <h1>REALIZA TU PEDIDO</h1>
+      <p>Elige tus prendas favoritas y recíbelas en casa</p>
+    </div>
+
+    <div class="panel-pedido">
+      <form id="formularioPedido">
+        <div class="campo-formulario">
+          <label for="nombreCompleto">Apellidos y Nombres Completos:</label>
+          <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Ingresa tu nombre" required />
+        </div>
+
+        <div class="campo-formulario">
+          <label for="correoElectronico">Correo Electronico:</label>
+          <input type="email" id="correoElectronico" name="correoElectronico" placeholder="Ejemplo@gmail,com" required />
+        </div>
+
+        <div class="campo-formulario">
+          <label for="numeroTelefono">Numero de telefono:</label>
+          <input type="tel" id="numeroTelefono" name="numeroTelefono" placeholder="Ingresa tu telefono" required />
+        </div>
+
+        <div class="campo-formulario">
+          <label for="direccionEntrega">Direccion de entrega:</label>
+          <input type="text" id="direccionEntrega" name="direccionEntrega" placeholder="Ingresa tu dirección" required />
+        </div>
+
+        <div class="campo-formulario">
+          <label for="metodoPago">Metodo de pago:</label>
+          <input type="text" id="metodoPago" name="metodoPago" list="opcionesPago" placeholder="Ingresa tu metodo de pago" required />
+          <datalist id="opcionesPago">
+            <option value="Tarjeta de crédito / débito"></option>
+            <option value="Yape / Plin"></option>
+            <option value="Transferencia bancaria"></option>
+            <option value="Pago contra entrega"></option>
+          </datalist>
+        </div>
+
+        <div class="resumen-pedido-box">
+          <strong>Prendas seleccionadas en tu pedido:</strong>
+          <ul id="listaResumenPedido">
+            <li>Aún no has agregado prendas. Ve a Productos para elegir.</li>
+          </ul>
+          <div class="total-pedido-fila">
+            Total estimado: <strong id="totalPedido">$0.00</strong>
+          </div>
+        </div>
+
+        <div class="contenedor-boton-pedido">
+          <button type="submit" class="btn-realizar-pedido">REALIZAR PEDIDO</button>
+        </div>
+
+        <div class="mensaje-confirmacion" id="mensajeConfirmacion"></div>
+      </form>
+    </div>
+  </main>
+<footer class="footer">
+    <h2>FASHION STORE</h2>
+    <p>Viste con estilo, expresa tu personalidad.</p>
+
+    <h3>Síguenos en nuestras redes sociales</h3>
+
+    <div class="redes-sociales">
+    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+
+    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+
+    <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+</div>
+
+    <p class="copyright">
+      © 2026 Fashion Store. Todos los derechos reservados.
+    </p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

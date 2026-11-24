@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FASHION STORE — Nosotros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .casilla-texto-venta {
+      width: 100%;
+      min-height: 195px;
+      background-color: #dcdcdc;
+      padding: 1.35rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.7rem;
+      color: #141414;
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .casilla-texto-venta p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="encabezado">
+    <div class="contenedor-nav">
+      <a href="index.html" class="marca-logo">FASHION STORE</a>
+
+      <nav class="menu-navegacion" aria-label="Menú principal">
+        <a href="index.html" class="enlace-nav">INICIO</a>
+        <a href="productos.html" class="enlace-nav">PRODUCTOS</a>
+        <a href="nosotros.html" class="enlace-nav activo">NOSOTROS</a>
+        <a href="compra.html" class="enlace-nav">COMPRA</a>
+        <a href="compra.html" class="btn-carrito-nav">
+          Carrito (<span id="contadorCarrito">0</span>)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div class="cinta-amarilla">
+      <h1>SOBRE NOSOTROS</h1>
+      <p>Conoce más sobre Fashion Store</p>
+    </div>
+
+    <div class="grid-nosotros">
+      <!-- LOGO DE FASHION STORE -->
+      <div class="logo-nosotros-box">
+        <img
+          src="IMG/logo.jpg"
+          alt="Logo Fashion Store Desde 2026"
+          onerror="mostrarAvisoImagen(this, 'Logo Fashion Store')"
+        />
+      </div>
+
+      <div class="columna-historia">
+        <div class="bloque-info">
+          <h2>Nuestra Historia</h2>
+          <div class="casilla-texto-venta">
+            <p>
+              Fashion Store nació en el año 2026 con el propósito de ofrecer prendas modernas y accesibles para todas las personas. Surgió como una iniciativa para brindar diferentes estilos de ropa que permitan a nuestros clientes expresar su personalidad y sentirse cómodos con lo que visten. Desde nuestros inicios, buscamos destacar por nuestra variedad, calidad y atención al cliente.
+            </p>
+          </div>
+        </div>
+
+        <div class="bloque-info">
+          <h2>Misión y Visión</h2>
+          <div class="casilla-texto-venta">
+            <p>
+              <strong>Misión:</strong> Ofrecer prendas de vestir modernas, de calidad y a precios accesibles, brindando a nuestros clientes una experiencia de compra cómoda y satisfactoria, con diferentes opciones que se adapten a sus gustos y necesidades.
+            </p>
+            <p>
+              <strong>Visión:</strong> Ser una tienda de ropa reconocida por su variedad, calidad y estilo, creciendo continuamente para llegar a más clientes y convertirnos en una marca de confianza en el mundo de la moda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+<footer class="footer">
+    <h2>FASHION STORE</h2>
+    <p>Viste con estilo, expresa tu personalidad.</p>
+
+    <h3>Síguenos en nuestras redes sociales</h3>
+
+    <div class="redes-sociales">
+    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+
+    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+
+    <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+</div>
+
+    <p class="copyright">
+      © 2026 Fashion Store. Todos los derechos reservados.
+    </p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
