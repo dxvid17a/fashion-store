@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FASHION STORE — Productos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="encabezado">
+    <div class="contenedor-nav">
+      <a href="index.html" class="marca-logo">FASHION STORE</a>
+
+      <nav class="menu-navegacion" aria-label="Menú principal">
+        <a href="index.html" class="enlace-nav">INICIO</a>
+        <a href="productos.html" class="enlace-nav activo">PRODUCTOS</a>
+        <a href="nosotros.html" class="enlace-nav">NOSOTROS</a>
+        <a href="compra.html" class="enlace-nav">COMPRA</a>
+        <a href="compra.html" class="btn-carrito-nav">
+          Carrito (<span id="contadorCarrito">0</span>)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div class="cinta-amarilla">
+      <h1>NUESTRA COLECCIÓN</h1>
+      <p>Descubre nuestras prendas y descubre tu estilo</p>
+    </div>
+
+    <div class="barra-filtros-coleccion">
+      <p id="textoConteoPrendas">Mostrando 6 prendas</p>
+
+      <div class="filtro-tallas-rapido">
+        <span class="etiqueta-talla">Filtrar por talla:</span>
+        <button type="button" class="btn-talla seleccionada" data-filtro-talla="TODAS" onclick="filtrarPorTalla('TODAS')">Todas</button>
+        <button type="button" class="btn-talla" data-filtro-talla="S" onclick="filtrarPorTalla('S')">S</button>
+        <button type="button" class="btn-talla" data-filtro-talla="M" onclick="filtrarPorTalla('M')">M</button>
+        <button type="button" class="btn-talla" data-filtro-talla="L" onclick="filtrarPorTalla('L')">L</button>
+        <button type="button" class="btn-talla" data-filtro-talla="XL" onclick="filtrarPorTalla('XL')">XL</button>
+      </div>
+    </div>
+
+    <!-- 6 CASILLAS DE PRENDAS (las imágenes se cambian en app.js) -->
+    <div class="grid-tres" id="gridColeccion"></div>
+  </main>
+<footer class="footer">
+    <h2>FASHION STORE</h2>
+    <p>Viste con estilo, expresa tu personalidad.</p>
+
+    <h3>Síguenos en nuestras redes sociales</h3>
+
+    <div class="redes-sociales">
+    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+
+    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+
+    <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+</div>
+
+    <p class="copyright">
+      © 2026 Fashion Store. Todos los derechos reservados.
+    </p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

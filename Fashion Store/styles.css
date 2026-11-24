@@ -1,0 +1,520 @@
+:root {
+  --amarillo: #f2c40f;
+  --amarillo-hover: #ddb005;
+  --gris-claro: #dcdcdc;
+  --gris-oscuro: #3a3a3a;
+  --negro: #0d0d0d;
+  --blanco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--blanco);
+  color: var(--negro);
+  line-height: 1.5;
+}
+
+/* ================= ENCABEZADO ================= */
+.encabezado {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--blanco);
+  border-bottom: 2px solid var(--amarillo);
+}
+
+.contenedor-nav {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.marca-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--negro);
+  text-decoration: none;
+}
+
+.menu-navegacion {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.enlace-nav {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--negro);
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.enlace-nav:hover,
+.enlace-nav.activo {
+  border-bottom-color: var(--amarillo);
+}
+
+.btn-carrito-nav {
+  background-color: var(--amarillo);
+  color: var(--negro);
+  text-decoration: none;
+  padding: 0.45rem 0.85rem;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.btn-carrito-nav:hover {
+  background-color: var(--amarillo-hover);
+}
+
+/* ================= CONTENEDOR PRINCIPAL ================= */
+.contenedor {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3.5rem;
+}
+
+/* ================= INICIO ================= */
+.hero-box {
+  background-color: var(--gris-claro);
+  padding: 3rem 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2.5rem;
+  min-height: 410px;
+}
+
+.hero-texto {
+  text-align: center;
+}
+
+.hero-texto h1 {
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-texto p {
+  font-size: 1.05rem;
+  color: #1f1f1f;
+  margin-bottom: 1.6rem;
+}
+
+.btn-amarillo {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--amarillo);
+  color: var(--negro);
+  padding: 0.85rem 2.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-amarillo:hover {
+  background-color: var(--amarillo-hover);
+  transform: translateY(-1px);
+}
+
+.hero-media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--gris-oscuro);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-media {
+    overflow: hidden;
+}
+
+.hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.subtitulo-seccion {
+  font-family: "Playfair Display", serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 2.4rem 0 1.6rem;
+}
+
+/* ================= CUADRÍCULAS DE ROPA ================= */
+.grid-tres {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.tarjeta-ropa {
+  background-color: var(--blanco);
+  border: 1px solid #e3e3e3;
+  display: flex;
+  flex-direction: column;
+}
+
+.casilla-imagen {
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  background-color: var(--gris-claro);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.casilla-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.placeholder-sin-foto {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777777;
+  font-weight: 600;
+}
+
+.cuerpo-ropa {
+  padding: 0.9rem 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.fila-nombre-precio {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.nombre-ropa {
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.precio-ropa {
+  font-size: 0.95rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.selector-tallas {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.etiqueta-talla {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 0.2rem;
+}
+
+.btn-talla {
+  border: 1px solid #b5b5b5;
+  background-color: var(--blanco);
+  color: var(--negro);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.22rem 0.55rem;
+  cursor: pointer;
+}
+
+.btn-talla.seleccionada {
+  background-color: var(--negro);
+  color: var(--blanco);
+  border-color: var(--negro);
+}
+
+.btn-agregar {
+  margin-top: auto;
+  background-color: var(--amarillo);
+  color: var(--negro);
+  border: none;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-agregar:hover {
+  background-color: var(--amarillo-hover);
+}
+
+/* ================= NOSOTROS ================= */
+.cinta-amarilla {
+  background-color: var(--amarillo);
+  text-align: center;
+  padding: 1.1rem 1.5rem;
+  margin: 0 auto 2.5rem;
+  max-width: 980px;
+}
+
+.cinta-amarilla h1 {
+  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.cinta-amarilla p {
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+.grid-nosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.logo-nosotros-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--negro);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-nosotros-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.columna-historia {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.bloque-info h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.casilla-texto-imagen {
+  width: 100%;
+  min-height: 195px;
+  background-color: var(--gris-claro);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.casilla-texto-imagen img {
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================= PRODUCTOS / COLECCIÓN ================= */
+.barra-filtros-coleccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.filtro-tallas-rapido {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+/* ================= COMPRA / PEDIDO ================= */
+.panel-pedido {
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+  padding: 2.5rem 3rem;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.campo-formulario {
+  margin-bottom: 1.15rem;
+  max-width: 680px;
+}
+
+.campo-formulario label {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.campo-formulario input {
+  width: 100%;
+  background-color: var(--gris-claro);
+  color: #2b2b2b;
+  border: none;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.campo-formulario input::placeholder {
+  color: #4f4f4f;
+}
+
+.resumen-pedido-box {
+  background-color: #2c2c2c;
+  border-left: 4px solid var(--amarillo);
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  max-width: 680px;
+  font-size: 0.92rem;
+}
+
+.resumen-pedido-box ul {
+  list-style: none;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.resumen-pedido-box li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.25rem;
+}
+
+.total-pedido-fila {
+  margin-top: 0.6rem;
+  text-align: right;
+}
+
+.btn-quitar {
+  background: none;
+  border: none;
+  color: var(--amarillo);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.82rem;
+}
+
+.contenedor-boton-pedido {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-realizar-pedido {
+  background-color: var(--amarillo);
+  color: var(--negro);
+  border: none;
+  padding: 0.9rem 2.6rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.btn-realizar-pedido:hover {
+  background-color: var(--amarillo-hover);
+}
+
+.mensaje-confirmacion {
+  margin-top: 1.2rem;
+  padding: 0.9rem 1.1rem;
+  background-color: #1f3d2b;
+  border: 1px solid #49b675;
+  color: #e8fff1;
+  font-size: 0.95rem;
+  display: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .hero-box {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .grid-tres {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-nosotros {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-tres {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-pedido {
+    padding: 1.6rem 1.25rem;
+  }
+}
+.footer {
+    background-color: #171717;
+    color: white;
+    text-align: center;
+    padding: 35px 20px 20px;
+    margin-top: 40px;
+}
+.footer {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.footer h2 {
+    font-family: "Playfair Display", serif;
+}

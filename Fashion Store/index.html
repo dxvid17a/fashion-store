@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FASHION STORE — Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="encabezado">
+    <div class="contenedor-nav">
+      <a href="index.html" class="marca-logo">FASHION STORE</a>
+
+      <nav class="menu-navegacion" aria-label="Menú principal">
+        <a href="index.html" class="enlace-nav activo">INICIO</a>
+        <a href="productos.html" class="enlace-nav">PRODUCTOS</a>
+        <a href="nosotros.html" class="enlace-nav">NOSOTROS</a>
+        <a href="compra.html" class="enlace-nav">COMPRA</a>
+        <a href="compra.html" class="btn-carrito-nav">
+          Carrito (<span id="contadorCarrito">0</span>)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <!-- BANNER PRINCIPAL -->
+    <section class="hero-box">
+      <div class="hero-texto">
+        <h1>VISTE CON ESTILO</h1>
+        <p>Descubre nuestra coleccion de ropa moderna</p>
+        <a href="productos.html" class="btn-amarillo">ver productos</a>
+      </div>
+
+      <!-- [IMAGEN 1: BANNER PRINCIPAL - CAMBIA EL src POR TU FOTO] -->
+      <div class="hero-media">
+        <img
+          src="IMG/portada.jpg"
+          alt="Colección moderna Fashion Store"
+          onerror="mostrarAvisoImagen(this, 'IMAGEN 1: Banner principal')"
+        />
+      </div>
+    </section>
+
+    <h2 class="subtitulo-seccion">Productos destacados</h2>
+
+    <!-- 3 CASILLAS DESTACADAS (las imágenes se cambian en app.js) -->
+    <div class="grid-tres" id="gridDestacados"></div>
+  </main>
+  <footer class="footer">
+    <h2>FASHION STORE</h2>
+    <p>Viste con estilo, expresa tu personalidad.</p>
+
+    <h3>Síguenos en nuestras redes sociales</h3>
+
+    <div class="redes-sociales">
+    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+
+    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+
+    <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+</div>
+
+    <p class="copyright">
+      © 2026 Fashion Store. Todos los derechos reservados.
+    </p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
